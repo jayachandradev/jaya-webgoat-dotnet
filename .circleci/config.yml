@@ -66,7 +66,7 @@ jobs:
             $ProgressPreference = 'SilentlyContinue'
             Invoke-WebRequest -Uri "https://cloud.appscan.com/api/Local/StaticAnalyzer/ARSATool" -OutFile "saclientutil.zip"
             Expand-Archive -Path "saclientutil.zip" -DestinationPath "saclientutil"
-            .\saclientutil\SAClientUtil.8.0.1431\bin\appscan.bat prepare -c $env:ASoC_IRX_Config_file -n output.irx
+            C:\Users\appscanadmin\Downloads\SAClientUtil_8.0.1498_win\SAClientUtil.8.0.1498\bin\appscan.bat prepare -c $env:ASoC_IRX_Config_file -n output.irx
             $irx_file = [IO.File]::ReadAllBytes('output.irx')
             $params = @{
               Uri         = "$baseURL/FileUpload"

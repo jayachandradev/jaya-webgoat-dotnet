@@ -64,9 +64,9 @@ jobs:
             Write-Host "Auth successful - Token received: $Members.token"
             $bearer_token = $Members.token
             $ProgressPreference = 'SilentlyContinue'
-            Invoke-WebRequest -Uri "https://cloud.appscan.com/api/Local/StaticAnalyzer/ARSATool" -OutFile "saclientutil.zip"
-            Expand-Archive -Path "saclientutil.zip" -DestinationPath "saclientutil"
-            C:\Users\appscanadmin\Downloads\SAClientUtil_8.0.1498_win\SAClientUtil.8.0.1498\bin\appscan.bat prepare -c $env:ASoC_IRX_Config_file -n output.irx
+            Invoke-WebRequest -Uri "https://cloud.appscan.com/api/Local/StaticAnalyzer/ARSATool" -OutFile "SAClientUtil_8.0.1500_win.zip"
+            Expand-Archive -Path "SAClientUtil_8.0.1500_win.zip" -DestinationPath "SAClientUtil_8.0.1500_win"
+            .\saclientutil_8.0.1500_win\SAClientUtil.8.0.1500\bin\appscan.bat prepare -c $env:ASoC_IRX_Config_file -n output.irx
             $irx_file = [IO.File]::ReadAllBytes('output.irx')
             $params = @{
               Uri         = "$baseURL/FileUpload"

@@ -40,10 +40,10 @@ jobs:
           name: "Run HCL AppScan Static Analysis"
           command: |
             $baseURL = 'https://cloud.appscan.com/api/V2'
-            #$env:ASoC_IRX_Config_file = "C:\Sample Applications\WebGoat.NET-master\WebGoat"
+            #$env:ASoC_IRX_Config_file = "C:\Sample Applications\WebGoat.NET-master\WebGoat\appscan-config.xml"
             $env:ASoC_appID = '1c992538-9ace-4e0c-b143-8a51010b1bba'
             $env:ASoC_scanName = 'Automated Scan from Circle CI'
-            $env:ASoC_IRX_Config_file = "C:\Sample Applications\WebGoat.NET-master\WebGoat"
+            $env:ASoC_IRX_Config_file = "C:\Sample Applications\WebGoat.NET-master\WebGoat\appscan-config.xml"
             $bearer_token =''
             $jsonBody = "
               {

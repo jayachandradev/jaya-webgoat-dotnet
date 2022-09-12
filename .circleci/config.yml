@@ -47,8 +47,8 @@ jobs:
             $bearer_token =''
             $jsonBody = "
               {
-              `"KeyId`": `"7e935422-9cd6-527d-29dd-54e4257f14c1",
-              `"KeySecret`": `"M/89OlmWabH4wJOjyC5Fu+UKQs2VkkKzdDu0q2SysBQ="
+              `"KeyId`": `"7e935422-9cd6-527d-29dd-54e4257f14c1`",
+              `"KeySecret`": `"M/89OlmWabH4wJOjyC5Fu+UKQs2VkkKzdDu0q2SysBQ=`"
               }
             "
             $params = @{
